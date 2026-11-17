@@ -1,0 +1,20 @@
+[project]
+name = "lw600p"
+version = "0.1.0"
+description = "Open replacement driver for the Epson LabelWorks LW-600P"
+requires-python = ">=3.10"
+dependencies = ["pyusb>=1.2", "pillow>=10.1"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+lw600p = "lw600p.cli:main"
+lw600p-editor = "lw600p.editor:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["lw600p"]

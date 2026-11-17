@@ -179,3 +179,8 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+.DS_Store
+/original
+
+# Generated per machine by tools/make_app.sh (contains local paths)
+/LW-600P Label Editor.app/
