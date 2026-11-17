@@ -1,0 +1,12 @@
+#!/bin/sh
+# Launches the editor from the repository this app sits in, using its .venv.
+# Resolved at runtime, so the checkout can live anywhere.
+REPO="$(cd "$(dirname "$0")/../../.." && pwd)"
+PY="$REPO/.venv/bin/python"
+
+if [ ! -x "$PY" ]; then
+    osascript -e 'display alert "LW-600P Label Editor" message "No Python environment (.venv) found next to this app.\n\nRun the setup steps from the README first (create .venv)." as critical' >/dev/null
+    exit 1
+fi
+
+cd "$REPO" && exec "$PY" -m lw600p.editor

@@ -182,5 +182,3 @@ cython_debug/
 .DS_Store
 /original
 
-# Generated per machine by tools/make_app.sh (contains local paths)
-/LW-600P Label Editor.app/

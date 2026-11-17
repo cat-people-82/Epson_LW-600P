@@ -9,12 +9,18 @@ last driver (1.37); see [PROTOCOL.md](PROTOCOL.md).
 ```bash
 brew install libusb python-tk@3.14
 "$(brew --prefix)/bin/python3.14" -m venv .venv && .venv/bin/pip install -e '.[test]'
-tools/make_app.sh            # builds "LW-600P Label Editor.app"
 ```
+
+Run these from the cloned folder.
 
 ## Label Editor
 
-Double-click **LW-600P Label Editor.app** (or run `.venv/bin/lw600p-editor`).
+Double-click **LW-600P Label Editor.app** in the cloned folder (or run
+`.venv/bin/lw600p-editor`). The app runs the editor from the folder it sits
+in, so keep it next to `.venv`. To put it in the Dock, drag it there; don't
+move it to Applications. If you downloaded a ZIP instead of cloning, macOS may
+block the first launch: Control-click the app and choose **Open**.
+
 Type the label text, pick a font, size and alignment, and use the live
 preview to check it. The dashed lines mark the printable band and the red
 lines mark the cuts. **Detect** reads the loaded tape width from the printer.
