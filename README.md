@@ -1,4 +1,4 @@
-# lw600p — open driver for the Epson LabelWorks LW-600P
+# Epson LabelWorks LW-600P — open driver and label editor for macOS
 
 Prints to the LW-600P over USB on modern macOS (including Apple Silicon), with
 no Epson kext or Intel binaries. The wire protocol was recovered from Epson's
